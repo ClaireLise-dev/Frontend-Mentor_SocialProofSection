@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+  --bg_feedback_h1: hsl(300, 43%, 22%);
+  --font_buyer: hsl(333, 80%, 67%);
+  --font_h2: hsl(303, 10%, 53%);
+  --bg_rating: hsl(300, 24%, 96%);
+  --bg: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  color: var(--bg_feedback_h1);
+  text-align: center;
+  background-image: url('./images/bg-pattern-top-mobile.svg'), 
+                    url('./images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat no-repeat;
+  background-position: top left, bottom right;
+  background-size: cover contain;
+  background-color:var(--bg);
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 20px;
+  padding: 10px;
+}
+
+h2 {
+  color: var(--font_h2);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 10px;
+}
+.reviews_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.review {
+  background-color: var(--bg_rating);
+  width: 90%;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.review img {
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.feedbacks_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+.feedback_card {
+  background-color: var(--bg_feedback_h1);
+  width: 90%;
+  margin:5px;
+  padding: 25px;
+  border-radius: 10px;
+  color: var(--bg);
+  text-align: left;
+  line-height:  1.2;
+}
+.profil {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profil img {
+  border-radius: 50%;
+  width: 40px;
+  height: auto;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-weight: 500;
+}
+.buyer {
+  color: var(--font_buyer)
+}
+
+@media only screen and (min-width:960px){
+  body{
+    background-image: url('./images/bg-pattern-top-desktop.svg'), 
+                      url('./images/bg-pattern-bottom-desktop.svg'); 
+  }
+  main {
+    text-align: left;
+    padding: 100px;
+  }
+  .desktop_flex {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header {
+    width: 30%;
+  }
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .feedbacks_container {
+    display: flex;
+    flex-direction: row;
+  }
+  .reviews_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    margin-right: 180px;
+  }
+  .review img {
+    padding: 5px;
+  }
+  h3 {
+    margin-left: 20px;
+  }
+  .review:nth-child(2){
+    margin-right:90px;
+  }
+  .review:nth-child(3) {
+    margin-right: 10px;
+  }
+  .feedbacks_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+  }
+  .feedback_card {
+    width: 30%;
+    padding: 25px 30px 35px 30px;
+  }
+  .feedback_card:nth-child(2){
+    margin-top: 25px;
+  }
+  .feedback_card:nth-child(3){
+    margin-top: 50px;
+  }
+}
