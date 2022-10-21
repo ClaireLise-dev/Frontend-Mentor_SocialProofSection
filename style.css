@@ -28,7 +28,6 @@ body {
   background-position: top left, bottom right;
   background-size: cover contain;
   background-color:var(--bg);
-  overflow: hidden;
 }
 
 main {
